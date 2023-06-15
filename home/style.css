@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* cursor: url("../img/favicon1.svg"), default; */
+}
+
+body{
+    overflow: auto;
 }
 
 :root {
@@ -21,8 +26,9 @@ header {
     align-items: center;
 }
 
-.posicionamento{
-    width: 1400px;
+.posicionamento {
+    width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -34,7 +40,12 @@ header {
 }
 
 .posicionamento_header img {
-    width: 250px;
+    width: 70%;
+    max-width: 250px;
+}
+
+.menu_barras {
+    display: none;
 }
 
 header nav {
@@ -42,7 +53,8 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
 }
 
 header a {
@@ -62,15 +74,16 @@ header a {
 
 
 
-h1{
-   width: 1em;
-   position: absolute;
-   left: -999em;
-   overflow: hidden;
+h1 {
+    width: 1em;
+    position: absolute;
+    left: -999em;
+    overflow: hidden;
 
-   /* display: none;
+    /* display: none;
    visibility: hidden; */
 }
+
 /* BANNER */
 .banner {
     background-image: url("../img/banner-background.png");
@@ -84,8 +97,9 @@ h1{
 }
 
 .banner_conteudo {
-    height: 400px;
-    width: 650px;
+    /* height: 400px; */
+    width: 95%;
+    max-width: 650px;
     background: linear-gradient(114.61deg, rgba(255, 255, 255, 0.052) 1.08%, rgba(255, 255, 255, 0.117) 99.26%);
     border: 1px solid rgba(255, 255, 255, 0.8);
     box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.5);
@@ -98,13 +112,14 @@ h1{
 
 .banner_conteudo span {
     font-family: var(--font2);
-    font-size: 50px;
+    font-size: 3.125em;
     margin: 30px 0;
 }
 
 .banner_conteudo p {
-    width: 500px;
-    font-size: 24px;
+    width: 95%;
+    max-width: 500px;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -115,9 +130,12 @@ h1{
 }
 
 .banner_botoes {
-    width: 500px;
+    width: 95%;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
+    margin-bottom: 50px;
 }
 
 .banner_botoes a {
@@ -138,11 +156,11 @@ h1{
 
 .banner_botoes .btn_cli {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(92.23deg, #FF398F -25.96%, #17BBFF 126.83%);
-    
+
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(25px);
 
-    padding: 11px 70px;
+    padding: 11px 64px;
     border-radius: 30%;
 }
 
@@ -152,7 +170,7 @@ h1{
 
 /* CONEXÂO */
 .desenvolvedores,
-.clientes{
+.clientes {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -160,9 +178,10 @@ h1{
     padding-bottom: 100px;
 }
 
-.conexao{
+.conexao {
     background-color: var(--azulC);
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 120px;
     border: 1px solid var(--branco);
     font-family: var(--font1);
@@ -177,7 +196,7 @@ h1{
 }
 
 .dev_conteudo,
-.clientes_conteudo{
+.clientes_conteudo {
     display: flex;
     text-transform: uppercase;
     gap: 100px;
@@ -185,24 +204,25 @@ h1{
 }
 
 .dev_conteudo img,
-.clientes_conteudo img{
-    width: 500px;
+.clientes_conteudo img {
+    max-width: 500px;
+    width: 50%;
 }
 
-h2{
+h2 {
     font-family: var(--font2);
     font-size: 25px;
     text-transform: uppercase;
 }
 
 .dev_conteudo ul,
-.clientes_conteudo ul{
+.clientes_conteudo ul {
     font-family: var(--font1);
     font-size: 18px;
     margin: 50px 0;
 }
 
-.main_btn{
+.main_btn {
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(25px);
     border-radius: 30%;
@@ -211,7 +231,7 @@ h2{
     font-family: var(--font2);
 }
 
-.clientes_conteudo a{
+.clientes_conteudo a {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(92.23deg, #FF398F -25.96%, #17BBFF 126.83%);
 
     padding: 11px 50px;
@@ -222,7 +242,7 @@ h2{
 
 
 /* PARALAX */
-.paralax{
+.paralax {
     background-image:
         url("../img/maos_connect.png");
     height: 300px;
@@ -237,11 +257,11 @@ h2{
 
 
 /* DEVs */
-.desenvolvedores{
+.desenvolvedores {
     padding-top: 100px;
 }
 
-.dev_conteudo a{
+.dev_conteudo a {
     background: linear-gradient(272.99deg, rgba(7, 12, 71, 0.55) 0%, rgba(7, 12, 71, 0.7) 100%);
 
     border: 4px solid var(--rosa);
@@ -253,23 +273,25 @@ h2{
 
 
 /* SERVIÇOS */
-.servicos{
+.servicos {
     /* display: flex; */
 }
 
-.servicos h2{
+.servicos h2 {
     text-align: center;
     margin-bottom: 100px;
 }
 
-.servicos>div{
+.servicos>div {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.card{
+.card {
     width: 400px;
-    height: 350px;
+    min-height: 350px;
     background-color: #182246;
     color: var(--branco);
     display: flex;
@@ -278,24 +300,308 @@ h2{
     justify-content: space-between;
     position: relative;
     padding: 60px 30px 30px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 5px 10px 15px #000000
 }
 
-.card img{
+.card img {
     position: absolute;
     top: -40px;
+    width: 120px;
 }
 
-h3{
-    font-size: 26px;
+h3 {
+    font-size: 1.625em;
 }
 
-.card p{
-    font-size: 20px;
+.card p {
+    font-size: 1.25em;
     text-align: center;
 }
 
-.card span{
+.card span {
+    font-size: 1.5em;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    background-image:
+        linear-gradient(#060821a0, #c12d6d30),
+        url("../img/background_footer.png");
+    background-size: cover;
+    color: var(--branco);
+    margin-top: 200px;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.span_dicas {
+    width: 100%;
+    max-width: 860px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid #FFFFFF;
+    box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(7.5px);
+    border-radius: 60px;
+    top: -35px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.span_dicas img {
+    position: absolute;
+    bottom: 25px;
+    left: 70px;
+    width: 40%;
+    max-width: 300px;
+}
+
+.span_dicas_texto {
+    width: 52%;
+    font-family: var(--font1);
     font-size: 24px;
+    padding-right: 40px;
+}
+
+.span_dicas_texto p {
+    margin-bottom: 30px;
+}
+
+.botao_dicas {
+    padding: 10px 50px;
+    color: var(--azulC);
+    background-color: var(--branco);
+    border-radius: 30%;
+    text-decoration: none;
+    font-family: var(--font2);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.rodape>p {
+    font-family: var(--font1);
+    margin-bottom: 10px;
+}
+
+.rodape_conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.rodape_conteudo h2 {
+    font-size: 24px;
+}
+
+.rodape_conteudo>img {
+    width: 40%;
+    min-width: 280px;
+}
+
+.rodape_conteudo_paginas ul {
+    font-family: var(--font1);
+    font-size: 18px;
+}
+
+.rodape_conteudo_paginas li::marker {
+    color: var(--azulC);
+}
+
+.rodape_conteudo_contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.rodape_conteudo_contatos img {
+    width: 45px;
+    margin: 10px;
+}
+
+.rodape_conteudo_contatos>a {
+    font-family: var(--font1);
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+
+@media screen and (max-width: 895px) {
+    .servicos>div>div:nth-child(2) {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu_barras {
+        display: initial;
+    }
+
+    .menu_barras svg {
+        height: 45px;
+        fill: var(--branco);
+    }
+
+    .posicionamento_header {
+        position: relative;
+    }
+
+    .posicionamento_header nav {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background-color: #ffffff;
+        flex-direction: column;
+        z-index: 1;
+        padding: 50px 0;
+        border-radius: 50px;
+        border: 1px solid #FFFFFF;
+        backdrop-filter: blur(10px);
+    }
+    
+    .posicionamento_header nav::after {
+        position: absolute;
+        top: -20px;
+        right: -6%;
+        background-color: #060821d0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        display: block;
+        content: '';
+    }
+
+    header nav a {
+        margin: 15px 0;
+    }
+
+    header nav a:not(:last-child){
+        border-bottom: 1px solid #ffffff;
+    }
+
+
+
+
+
+
+    /* CLIENTES / DEVs */
+    .dev_conteudo img, .clientes_conteudo img{
+        display: none;
+    }
+
+    .dev_conteudo > div, .clientes_conteudo > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
+
+
+    /* FOOTER */
+    footer{
+        margin-top: 120px;
+    }
+    .span_dicas {
+        justify-content: center;
+    }
+
+    .span_dicas img{
+        display: none;
+    }
+
+    .span_dicas_texto{
+        width: 95%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .rodape_conteudo{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .rodape_conteudo_contatos{
+        align-items: center;
+        order: 2;
+    }
+
+    .rodape_conteudo_paginas{
+        order: 3;
+    }
+
+    .rodape_conteudo img{
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner_conteudo{
+        font-size: 13px;
+    }
+
+    .banner_botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner_conteudo .banner_li3 {
+        margin-bottom: 30px;
+    }
+
+    .banner_botoes a{
+        font-size: 16px;
+    }
+
+    .banner_botoes a:nth-child(2){
+        margin-top: 30px;
+    }
+
+    .conexao{
+        font-size: 19px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .desenvolvedores {
+        padding-top: 60px;
+    }
+
+    .desenvolvedores, .clientes {
+        padding-bottom: 60px;
+    }
+
+    .dev_conteudo ul, .clientes_conteudo ul {
+        font-size: 15px;
+        margin: 40px 0;
+    }
+
+    .card{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .span_dicas_texto {
+        font-size: 18px;
+    }
 }
